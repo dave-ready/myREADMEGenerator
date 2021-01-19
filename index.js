@@ -1,9 +1,14 @@
 //'require' node modules
 const fs = require('fs');
 const inquirer = require('inquirer');
+const util = require('util');
 
-//use inquirer. to create questions/prompts for user
+const writeFileAsync = util.promisify(fs.writeFile);
 
+
+//wrap user questions/prompts in a function
+const promptUser = () =>
+//use inquirer.prompt to create questions/prompts for user
 inquirer
   .prompt([
       {
@@ -53,12 +58,12 @@ inquirer
         name:'email',
     },
 
-  ]).then(({title, description, installation, usage, licenses, contributing, tests, username,email}) => {
+  ])
 
 
 //Create README Template as a const
-  const readMeTemplate = `
-
+const readMeTemplate = `
+  
   ##${licenses}
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
   #${title}
@@ -88,17 +93,9 @@ inquirer
   -Github Username: ${username}
   -E-mail: ${email}
   `;
-  generateNewFile(title, readMeTemplate)
-});
 
-//Create a function to generate readme using file system
+ 
 
-function generateNewFile(fileName, data) {
-    fs.writefile(`./${fileName.toLowerCase().split(' ').join('')}.md`,data,(err) => {
-        if(err) {
-            console.log(err)
-        }
-        console.log("Your README is now complete!!");
+  
 
-    })
-}
+
