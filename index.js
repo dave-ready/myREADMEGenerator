@@ -29,8 +29,8 @@ inquirer
     {
         type:'list',
         message:"Select licences used for your project",
-        name:'Lincenses',
-        choices: 'Apache 2.0','Boost 1.0', 'MIT', 'GNU 2.0', 'GNU 3.0',
+        name:'Licenses',
+        choices: ['Apache 2.0','Boost 1.0', 'MIT', 'GNU 2.0', 'GNU 3.0']
     },
     {
         type:'input',
@@ -45,12 +45,46 @@ inquirer
     {
         type:'input',
         message:"Enter your GitHub username",
-        name:'Questions',
+        name:'Username',
     },
     {
         type:'input',
         message:"Enter your email address",
-        name:'Questions',
+        name:'Email',
     },
 
-  ])
+  ]);
+
+
+//Create README Template/Save as a const
+  const readMeTemplate = `
+
+  ##${response.licenses}
+  #${response.title}
+
+
+  ##Table of Contents
+  -[Description](#Description)
+  -[Installation](#Installation)
+  -[Usage](#Usage)
+  -[Contributing](#Contributing)
+  -[Tests](#Tests)
+
+  
+  ##Description
+  ${response.description}
+  
+  ##Installation
+  ${response.installation}
+
+  ##Usage
+  ${response.usage}
+
+  ##Contributing
+  ${response.contributing}
+
+  ##Contact
+  -Github Username: ${response.username}
+  -E-mail: ${response.email}
+  
+  `;
