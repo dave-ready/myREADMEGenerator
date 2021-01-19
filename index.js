@@ -61,9 +61,18 @@ inquirer
   ])
 
 
-//Create README Template as a const
-const readMeTemplate = `
-  
+//Create function creating the template for the readme file
+const returnReadMe = (title,
+                      description,
+                      installation,
+                      usage,
+                      licenses,
+                      contributing,
+                      tests,
+                      username,
+                      email) =>  
+                      
+  `
   ##${licenses}
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
   #${title}
@@ -93,6 +102,8 @@ const readMeTemplate = `
   -Github Username: ${username}
   -E-mail: ${email}
   `;
+
+  
 
  
 
