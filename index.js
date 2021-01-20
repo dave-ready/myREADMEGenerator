@@ -124,7 +124,7 @@ const returnReadMe = (title,
   <p>${tests}</p>
   </div>
 
-  <br
+  <br>
 
   <h3>Contact</h3>
   <ul>
@@ -132,6 +132,22 @@ const returnReadMe = (title,
   <li>E-mail: ${email}</li>
   </ul>
   `;
+
+  //call promptUser function
+ promptUser()
+ //.then use writeFileAsync to transfer data to README.txt file
+ .then((answers) => writeFileAsync('README.html', returnReadMe(answers.title, 
+                                                              answers.description, 
+                                                              answers.installation, 
+                                                              answers.usage, 
+                                                              answers.licenses, 
+                                                              answers.contributing, 
+                                                              answers.tests, 
+                                                              answers.username, 
+                                                              answers.email)))
+ //.then console.log a message when readme is complete
+ .then(() => console.log("Your README is now complete!"))
+ .catch((err) => console.error(err));
 
   
 
