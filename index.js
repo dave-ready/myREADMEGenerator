@@ -92,46 +92,50 @@ const returnReadMe = (title,
   </ul>
 
   <div id=Description>
-  <h2>Description</h2>
+  <h3>Description</h3>
   <p>${description}</p>
   </div>
 
   <br>
 
   <div id=Installation>
-  <h2>Installation</h2>
+  <h3>Installation</h3>
   <p>${installation}</p>
   </div>
 
   <br>
   
   <div id=Usage>
-  <h2>Usage</h2>
+  <h3>Usage</h3>
   <p>${usage}</p>
   </div>
 
   <br>
   
   <div id=Contributing>
-  <h2>Contributing</h2>
+  <h3>Contributing</h3>
   <p>${contributing}</p>
   </div>
 
   <br>
 
   <div id=Tests>
-  <h2>Tests</h2>
+  <h3>Tests</h3>
   <p>${tests}</p>
   </div>
 
   <br
 
-  <h2>Contact</h2>
+  <h3>Contact</h3>
   <ul>
   <li>Github Username: ${username}</li>
   <li>E-mail: ${email}</li>
   </ul>
   `;
+
+  
+
+  
 
   
   
