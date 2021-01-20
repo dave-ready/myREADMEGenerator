@@ -35,12 +35,16 @@ inquirer
         type:'list',
         message:"Select licences used for your project",
         name:'licenses',
-        choices: ['Apache 2.0','Boost 1.0', 'MIT', 'BSD 2.0', 'BSD 3.0']
+        choices: ['Apache 2.0<img scr="https://opensource.org/licenses/Apache-2.0">',
+                  'Boost 1.0<img src="https://www.boost.org/LICENSE_1_0.txt">', 
+                  'MIT<img src="https://opensource.org/licenses/MIT">', 
+                  'BSD 2.0<img src="https://opensource.org/licenses/BSD-2-Clause">', 
+                  'BSD 3.0<img src="https://opensource.org/licenses/BSD-3-Clause">']
     },
     {
         type:'input',
         message:"Enter any contributing info",
-        name:'contributing'
+        name:'contributing',
     },
     {
         type:'input',
@@ -73,36 +77,63 @@ const returnReadMe = (title,
                       email) =>  
                       
   `
-  ##${licenses}
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
-  #${title}
+  <p>${licenses}</p>
+  <br>
+  <h1>${title}</h1>
 
 
-  ##Table of Contents
-  -[Description](#Description)
-  -[Installation](#Installation)
-  -[Usage](#Usage)
-  -[Contributing](#Contributing)
-  -[Tests](#Tests)
+  <h2>Table of Contents</h2>
+  <ul>
+  <li><a href="#Description">Description</a></li>
+  <li><a href="#Installation">Installation</a></li>
+  <li><a href="#Usage">Installation</a></li>
+  <li><a href="#Contributing">Contributing</a></li>
+  <li><a href="#tests">Tests</a></li>
+  </ul>
 
+  <div id=Description>
+  <h2>Description</h2>
+  <p>${description}</p>
+  </div>
+
+  <br>
+
+  <div id=Installation>
+  <h2>Installation</h2>
+  <p>${installation}</p>
+  </div>
+
+  <br>
   
-  ##Description
-  ${description}
+  <div id=Usage>
+  <h2>Usage</h2>
+  <p>${usage}</p>
+  </div>
+
+  <br>
   
-  ##Installation
-  ${installation}
+  <div id=Contributing>
+  <h2>Contributing</h2>
+  <p>${contributing}</p>
+  </div>
 
-  ##Usage
-  ${usage}
+  <br>
 
-  ##Contributing
-  ${contributing}
+  <div id=Tests>
+  <h2>Tests</h2>
+  <p>${tests}</p>
+  </div>
 
-  ##Contact
-  -Github Username: ${username}
-  -E-mail: ${email}
+  <br
+
+  <h2>Contact</h2>
+  <ul>
+  <li>Github Username: ${username}</li>
+  <li>E-mail: ${email}</li>
+  </ul>
   `;
 
+  
   
 
  
