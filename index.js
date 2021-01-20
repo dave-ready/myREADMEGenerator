@@ -73,34 +73,60 @@ const returnReadMe = (title,
                       email) =>  
                       
   `
-  ##${licenses}
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
-  #${title}
+  <p>${licenses}</p>
+  <br>
+  <h1>${title}</h1>
 
 
-  ##Table of Contents
-  -[Description](#Description)
-  -[Installation](#Installation)
-  -[Usage](#Usage)
-  -[Contributing](#Contributing)
-  -[Tests](#Tests)
+  <h2>Table of Contents</h2>
+  <ul>
+  <li><a href="#Description">Description</a></li>
+  <li><a href="#Installation">Installation</a></li>
+  <li><a href="#Usage">Installation</a></li>
+  <li><a href="#Contributing">Contributing</a></li>
+  <li><a href="#tests">Tests</a></li>
+  </ul>
 
+  <div id=Description>
+  <h2>Description</h2>
+  <p>${description}</p>
+  </div>
+
+  <br>
+
+  <div id=Installation>
+  <h2>Installation</h2>
+  <p>${installation}</p>
+  </div>
+
+  <br>
   
-  ##Description
-  ${description}
+  <div id=Usage>
+  <h2>Usage</h2>
+  <p>${usage}</p>
+  </div>
+
+  <br>
   
-  ##Installation
-  ${installation}
+  <div id=Contributing>
+  <h2>Contributing</h2>
+  <p>${contributing}</p>
+  </div>
 
-  ##Usage
-  ${usage}
+  <br>
 
-  ##Contributing
-  ${contributing}
+  <div id=Tests>
+  <h2>Tests</h2>
+  <p>${tests}</p>
+  </div>
 
-  ##Contact
-  -Github Username: ${username}
-  -E-mail: ${email}
+  <br
+
+  <h2>Contact</h2>
+  <ul>
+  <li>Github Username: ${username}</li>
+  <li>E-mail: ${email}</li>
+  </ul>
   `;
 
   
