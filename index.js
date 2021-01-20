@@ -92,65 +92,41 @@ const returnReadMe = (title,
   </ul>
 
   <div id=Description>
-<<<<<<< HEAD
   <h3>Description</h3>
-=======
-  <h2>Description</h2>
->>>>>>> 63404c018e709a7c42a15bdff8dada55f91ec6cb
   <p>${description}</p>
   </div>
 
   <br>
 
   <div id=Installation>
-<<<<<<< HEAD
   <h3>Installation</h3>
-=======
-  <h2>Installation</h2>
->>>>>>> 63404c018e709a7c42a15bdff8dada55f91ec6cb
   <p>${installation}</p>
   </div>
 
   <br>
   
   <div id=Usage>
-<<<<<<< HEAD
   <h3>Usage</h3>
-=======
-  <h2>Usage</h2>
->>>>>>> 63404c018e709a7c42a15bdff8dada55f91ec6cb
   <p>${usage}</p>
   </div>
 
   <br>
   
   <div id=Contributing>
-<<<<<<< HEAD
   <h3>Contributing</h3>
-=======
-  <h2>Contributing</h2>
->>>>>>> 63404c018e709a7c42a15bdff8dada55f91ec6cb
   <p>${contributing}</p>
   </div>
 
   <br>
 
   <div id=Tests>
-<<<<<<< HEAD
   <h3>Tests</h3>
-=======
-  <h2>Tests</h2>
->>>>>>> 63404c018e709a7c42a15bdff8dada55f91ec6cb
   <p>${tests}</p>
   </div>
 
   <br
 
-<<<<<<< HEAD
   <h3>Contact</h3>
-=======
-  <h2>Contact</h2>
->>>>>>> 63404c018e709a7c42a15bdff8dada55f91ec6cb
   <ul>
   <li>Github Username: ${username}</li>
   <li>E-mail: ${email}</li>
