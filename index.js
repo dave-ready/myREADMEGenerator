@@ -88,7 +88,7 @@ const returnReadMe = (title,
   <li><a href="#Installation">Installation</a></li>
   <li><a href="#Usage">Usage</a></li>
   <li><a href="#Contributing">Contributing</a></li>
-  <li><a href="#tests">Tests</a></li>
+  <li><a href="#Tests">Tests</a></li>
   </ul>
 
   <div id=Description>
