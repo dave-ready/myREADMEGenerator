@@ -3,7 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const util = require('util');
 
-const writeFileAsync = util.promisify(fs.writeFile);
+//const writeFileAsync = util.promisify(fs.writeFile);
 
 
 //wrap user questions/prompts in a function
@@ -77,66 +77,43 @@ const returnReadMe = (title,
                       email) =>  
                       
   `
-  <p>${licenses}</p>
-  <br>
-  <h1>${title}</h1>
+  ##${licenses}
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]
+  #${title}
 
 
-  <h2>Table of Contents</h2>
-  <ul>
-  <li><a href="#Description">Description</a></li>
-  <li><a href="#Installation">Installation</a></li>
-  <li><a href="#Usage">Usage</a></li>
-  <li><a href="#Contributing">Contributing</a></li>
-  <li><a href="#Tests">Tests</a></li>
-  </ul>
+  ##Table of Contents
+  -[Description](#Description)
+  -[Installation](#Installation)
+  -[Usage](#Usage)
+  -[Contributing](#Contributing)
+  -[Tests](#Tests)
 
-  <div id=Description>
-  <h3>Description</h3>
-  <p>${description}</p>
-  </div>
+  ##Description
+  ${description}
 
-  <br>
+  ##Installation
+  ${installation}
 
-  <div id=Installation>
-  <h3>Installation</h3>
-  <p>${installation}</p>
-  </div>
+  ##Usage
+  ${usage}
 
-  <br>
+  ##Contributing
+  ${contributing}
+
+  ##Tests
+  ${tests}
   
-  <div id=Usage>
-  <h3>Usage</h3>
-  <p>${usage}</p>
-  </div>
 
-  <br>
-  
-  <div id=Contributing>
-  <h3>Contributing</h3>
-  <p>${contributing}</p>
-  </div>
-
-  <br>
-
-  <div id=Tests>
-  <h3>Tests</h3>
-  <p>${tests}</p>
-  </div>
-
-  <br>
-
-  <h3>Contact</h3>
-  <ul>
-  <li>Github Username: ${username}</li>
-  <li>E-mail: ${email}</li>
-  </ul>
+  ##Contact
+  -Github Username: ${username}
+  -E-mail: ${email}
   `;
 
   //call promptUser function
  promptUser()
  //.then use writeFileAsync to transfer data to README.txt file
- .then((answers) => writeFileAsync('README.html', returnReadMe(answers.title, 
+ .then((answers) => writeFileAsync('README.md', returnReadMe(answers.title, 
                                                               answers.description, 
                                                               answers.installation, 
                                                               answers.usage, 
