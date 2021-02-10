@@ -3,11 +3,13 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const util = require('util');
 
-//const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 
 //wrap user questions/prompts in a function
-const promptUser = () =>
+const promptUser = (
+
+) =>
 //use inquirer.prompt to create questions/prompts for user
 inquirer
   .prompt([
